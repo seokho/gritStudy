@@ -1,14 +1,21 @@
-package sorting;
+package Algorithm;
+
+import java.util.Comparator;
 
 /**
  * Created by odol on 2016. 11. 23..
  */
-public class Fibonacci {
+public class Fibonacci extends Algorithm {
+    private int[] array;
     private int[] memo;
 
-    public void runFibonacci(int num) {
+    public Fibonacci(int[] array) {
+        this.array = array;
+    }
+
+    private int runFibonacci(int num) {
         memo = new int[num + 1];
-        System.out.println(fibonacci(num));
+        return fibonacci(num);
     }
 
     private int fibonacci(int num) {
@@ -19,5 +26,10 @@ public class Fibonacci {
         }
         memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
         return memo[num];
+    }
+
+    @Override
+    public int getResult() {
+        return runFibonacci(array[0]);
     }
 }
