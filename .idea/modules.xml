@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/grit/grit.iml" filepath="$PROJECT_DIR$/grit/grit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gritStudy.iml" filepath="$PROJECT_DIR$/gritStudy.iml" />
+    </modules>
+  </component>
+</project>
