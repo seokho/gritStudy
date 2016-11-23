@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="grit:war">
+    <output-path>$PROJECT_DIR$/grit/target</output-path>
+    <root id="archive" name="grit.war">
+      <element id="artifact" artifact-name="grit:war exploded" />
+    </root>
+  </artifact>
+</component>
