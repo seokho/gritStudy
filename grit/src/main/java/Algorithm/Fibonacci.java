@@ -8,14 +8,16 @@ import java.util.Comparator;
 public class Fibonacci extends Algorithm {
     private int[] array;
     private int[] memo;
+    private int n, n1, n2;
 
     public Fibonacci(int[] array) {
         this.array = array;
     }
 
     private int runFibonacci(int num) {
-        memo = new int[num + 1];
-        return fibonacci(num);
+//        memo = new int[num + 1];
+//        return fibonacci(num);
+        return improveFibonacci(num);
     }
 
     private int fibonacci(int num) {
@@ -28,8 +30,26 @@ public class Fibonacci extends Algorithm {
         return memo[num];
     }
 
+    private int improveFibonacci(int num) {
+        n = 0;
+        n1 = 1;
+        n2 = 1;
+        for (int i = 1; i <= num; i++) {
+            if (i <= 2) {
+                n = 1;
+            } else {
+                n = n1 + n2;
+                n2 = n1;
+                n1 = n;
+            }
+
+        }
+        return n;
+    }
+
+
     @Override
-    public int getResult() {
-        return runFibonacci(array[0]);
+    public String getResult() {
+        return String.valueOf(runFibonacci(array[0]));
     }
 }

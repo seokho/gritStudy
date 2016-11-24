@@ -21,7 +21,7 @@ public class SectionSumMax extends Algorithm {
         return result;
     }
 
-    public int getResult() {
-        return sectionSumMax();
+    public String getResult() {
+        return String.valueOf(sectionSumMax());
     }
 }

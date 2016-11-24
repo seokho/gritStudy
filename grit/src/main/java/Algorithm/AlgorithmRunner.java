@@ -15,5 +15,9 @@ public class AlgorithmRunner {
                 new SectionSumMaxFactory(new int[]{-7, 4, -3, 6, 3, -8, 3, 5, -2}));
         System.out.println(sectionSumMax.getResult());
 
+        Algorithm transferHexa = AlgorithmFactory.getAlgorithm(
+                new TransferFactory(new int[]{450}));
+        System.out.println(transferHexa.getResult());
+
     }
 }
