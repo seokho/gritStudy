@@ -1,6 +1,4 @@
-package Algorithm;
-
-import java.util.Arrays;
+package Algorithm.AbstractPractice;
 
 /**
  * Created by odol on 2016. 11. 23..

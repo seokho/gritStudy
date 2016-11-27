@@ -1,6 +1,4 @@
-package Algorithm;
-
-import java.util.Comparator;
+package Algorithm.AbstractPractice;
 
 /**
  * Created by odol on 2016. 11. 23..
@@ -29,6 +27,7 @@ public class Fibonacci extends Algorithm {
         memo[num] = fibonacci(num - 1) + fibonacci(num - 2);
         return memo[num];
     }
+
 
     private int improveFibonacci(int num) {
         n = 0;
