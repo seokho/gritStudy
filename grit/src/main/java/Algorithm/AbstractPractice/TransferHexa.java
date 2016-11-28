@@ -14,7 +14,7 @@ public class TransferHexa extends Algorithm {
 
     private String transferHexa(int num) {
         StringBuilder stringBuilder = new StringBuilder();
-        while (num  >= HEXA_VALUE) {
+        while (num >= HEXA_VALUE) {
             stringBuilder.append(convertHexa(num % HEXA_VALUE));
             num /= HEXA_VALUE;
         }
@@ -25,7 +25,7 @@ public class TransferHexa extends Algorithm {
         if (num < 10) {
             return (char) (num + '0');
         }
-        return (char) (num -10 + 'A');
+        return (char) (num - 10 + 'A');
     }
 
 

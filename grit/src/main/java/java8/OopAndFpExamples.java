@@ -13,10 +13,17 @@ public class OopAndFpExamples {
 //        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 //        String result = numbers.stream().map(String::valueOf).collect(Collectors.joining(" : "));
         CalculatorService calculatorService = new CalculatorService(new Addtion());
-        int addtion = calculatorService.calculate(1,1);
+        calculatorService.calculate(1,1);
 
         FpCalculatorService fpCalculatorService = new FpCalculatorService();
         int addtionFp = fpCalculatorService.calculate(new Addtion(), 1,2);
+        //anonymous function
+        System.out.println(fpCalculatorService.calculate((i1, i2) -> i1 + i2, 1, 1));
+        // 변하는 부분을 쉽게쉽게 변경시켜서 사용할 수 있다
+        System.out.println(fpCalculatorService.calculate((i1, i2) -> (i1 + i2) * (i2), 1, 1));
+        Calculation addtion = (i1, i2) -> i1 + i2;
+
+        //oop 에선 dependency 를 만들어서 주입하고 하는 방식인데 functional에선 위와 같이 활용 가능
 
     }
 
